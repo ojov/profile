@@ -15,14 +15,24 @@ const Contact = () => {
       [e.target.name]: e.target.value
     });
   };
+  // ...existing code...
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     try {
-      const res = await fetch('http://localhost:8080/api/email', {
+      const res = await fetch('https://mailservice-ojov340-wmq2zj06.leapcell.dev/send-email', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        headers: { 
+          'accept': 'application/json',
+          'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify({
+          sender_name: formData.name,
+          sender_email: formData.email,
+          subject: formData.subject,
+          body: formData.message,
+          html: true
+        }),
       });
 
       if (res.ok) {
@@ -35,7 +45,7 @@ const Contact = () => {
       alert('An error occurred. Please try again.');
     }
   };
-
+// ...existing code...
   return (
     <section id="contact" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

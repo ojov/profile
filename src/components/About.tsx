@@ -19,7 +19,7 @@ const About = () => {
             <p className="text-lg text-gray-300 leading-relaxed">
               I'm a dedicated Backend Engineer with extensive experience in Java development, specializing in 
               Spring Boot, microservices architecture, and cloud technologies. Currently pursuing a Master's in 
-              Computer Science at Woolf University while working as a Software Engineer.
+              Financial Engineering at World Quant University while working as a Software Engineer.
             </p>
             
             <p className="text-lg text-gray-300 leading-relaxed">
