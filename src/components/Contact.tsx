@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
 
 const Contact = () => {
@@ -15,7 +17,6 @@ const Contact = () => {
       [e.target.name]: e.target.value
     });
   };
-  // ...existing code...
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -35,17 +36,19 @@ const Contact = () => {
         }),
       });
 
-      if (res.ok) {
-        alert('Message sent successfully!');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        alert('Failed to send message.');
-      }
-    } catch (error) {
-      alert('An error occurred. Please try again.');
-    }
+     if (res.ok) {
+     toast.success('Message sent successfully!');
+     console.log('Message sent successfully!');
+     // Reset form fields
+     setFormData({ name: '', email: '', subject: '', message: '' });
+   } else {
+    console.error('Failed to send message:', res.statusText);
+     toast.error('Failed to send message.');
+   }
+ } catch (error) {
+   toast.error('An error occurred. Please try again.');
+ }
   };
-// ...existing code...
   return (
     <section id="contact" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
