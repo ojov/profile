@@ -17,7 +17,7 @@ const Skills = () => {
         { name: 'Spring Boot', level: 95 },
         { name: 'Spring Framework', level: 90 },
         { name: 'Hibernate/JPA', level: 85 },
-        { name: 'React', level: 75 },
+        { name: 'React', level: 60 },
       ],
     },
     {

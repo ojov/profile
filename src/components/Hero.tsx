@@ -78,10 +78,15 @@ const Hero = () => {
             <span>Get In Touch</span>
           </button>
           
-          <button className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
+          <a
+            href="https://flowcv.com/resume/0c7r6a26nmcb"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
+          >
             <Download className="h-5 w-5" />
             <span>Download Resume</span>
-          </button>
+          </a>
         </div>
 
         <div className="flex justify-center space-x-8 mb-16">

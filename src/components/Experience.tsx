@@ -3,76 +3,84 @@ import { Calendar, MapPin, Briefcase } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
-    {
-      title: 'Software Engineer',
-      company: 'Decagon Institute',
-      location: 'Lagos, Nigeria',
-      period: '2024 - Present',
-      description: 'Working on enterprise-level Java applications, focusing on backend development with Spring Boot and microservices architecture.',
-      achievements: [
-        'Developed scalable RESTful APIs serving thousands of users',
-        'Implemented microservices architecture using Spring Boot',
-        'Optimized database queries improving performance by 40%',
-        'Collaborated with cross-functional teams in agile environment'
-      ],
-      technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Docker', 'AWS']
-    },
-    {
-      title: 'Backend Developer',
-      company: 'Freelance Projects',
-      location: 'Remote',
-      period: '2022 - 2024',
-      description: 'Delivered custom backend solutions for various clients, specializing in Java-based web applications and API development.',
-      achievements: [
-        'Built e-commerce backend systems with payment integration',
-        'Developed real-time chat applications using WebSocket',
-        'Created automated testing suites with 90%+ code coverage',
-        'Implemented secure authentication and authorization systems'
-      ],
-      technologies: ['Java', 'Spring Framework', 'MySQL', 'Redis', 'JWT']
-    },
-    {
-      title: 'Junior Java Developer',
-      company: 'Learning & Development',
-      location: 'Nigeria',
-      period: '2021 - 2022',
-      description: 'Focused on learning Java fundamentals and building foundational projects while contributing to open-source initiatives.',
-      achievements: [
-        'Completed comprehensive Java certification programs',
-        'Built multiple full-stack applications for portfolio',
-        'Contributed to open-source Java projects on GitHub',
-        'Participated in coding bootcamps and technical workshops'
-      ],
-      technologies: ['Core Java', 'Spring MVC', 'HTML/CSS', 'JavaScript', 'Git']
-    }
-  ];
+  {
+    title: 'Lead Backend Engineer',
+    company: 'Trybe Mobile',
+    location: 'Austin, Texas, USA',
+    period: 'Jul 2024 - Present',
+    description:
+      'Designed and engineered a scalable AWS backend architecture to support mission-critical customer acquisition and revenue operations, achieving 99.9% uptime and enhancing data integrity through robust multi-layer authentication.',
+    achievements: [
+      'Implemented OAuth2 authentication and integrated Google and Apple sign-in to reduce onboarding friction and secure revenue-driving user interactions.',
+      'Integrated Cloudinary for dynamic media storage, efficiently managing thousands of images and videos to optimize content delivery and customer experience.',
+      'Leveraged OpenAI Embeddings to integrate semantic search, improving content relevance and supporting scalable system enhancements.',
+      'Automated CI/CD pipelines to optimize deployment processes, reducing release time by 10% and boosting system reliability in a cloud-native environment.'
+    ],
+    technologies: [
+      'AWS', 'OAuth2', 'Google Sign-In', 'Apple Sign-In', 'Cloudinary', 'OpenAI', 'CI/CD', 'Node.js', 'TypeScript'
+    ]
+  },
+  {
+    title: 'Backend Developer',
+    company: 'Simplify Synergy',
+    location: 'Abuja, Nigeria',
+    period: 'Jul 2024 - Jun 2025',
+    description:
+      'Developed robust KYC API and secure onboarding workflows to facilitate dynamic regulatory compliance and enhance customer experience, aligning with scalable system requirements.',
+    achievements: [
+      'Executed data migration from a relational database to NoSQL, improving transaction speeds by 30%, while ensuring data integrity crucial for distributed systems.',
+      'Implemented a microservices architecture using Spring Boot and reactive programming to reduce load times by 30%, ensuring system scalability and high reliability.',
+      'Engineered a secure authentication and authorization system with OAuth2 and Keycloak for over 1,000 users, reinforcing data security in critical operations.',
+      'Utilized Kafka for event-driven processing, ensuring high throughput and fault tolerance, key aspects in maintaining robust revenue and customer acquisition systems.'
+    ],
+    technologies: [
+      'Spring Boot', 'Reactive Programming', 'OAuth2', 'Keycloak', 'Kafka', 'NoSQL', 'KYC', 'Microservices'
+    ]
+  },
+  {
+    title: 'Associate Software Engineer',
+    company: 'Decagon',
+    location: 'Benin, Nigeria',
+    period: 'Sep 2022 - Jul 2024',
+    description:
+      'Worked with cross-functional teams to design and develop web applications using Agile methodologies, resulting in a 20% reduction in project delivery times.',
+    achievements: [
+      'Designed and implemented Docker-based containerization for web and mobile APIs, improving deployment speed by 30%.',
+      'Designed and implemented JPA-based data access layers, optimizing database interactions and improving query efficiency by 40%.',
+      'Mentored over 200 aspiring software engineers in backend development using Java and Spring Boot.'
+    ],
+    technologies: [
+      'Java', 'Spring Boot', 'Docker', 'JPA', 'Agile', 'Mentorship'
+    ]
+  }
+];
 
   const education = [
-    {
-      degree: 'Master of Science in Computer Science',
-      school: 'Woolf University',
-      location: 'Online',
-      period: '2024 - Present',
-      gpa: 'In Progress',
-      relevant: ['Advanced Algorithms', 'Distributed Systems', 'Software Architecture', 'Machine Learning']
-    },
-    {
-      degree: 'Certificate in Software Engineering',
-      school: 'Decagon Institute',
-      location: 'Lagos, Nigeria',
-      period: '2024',
-      gpa: 'Completed',
-      relevant: ['Java Development', 'Spring Boot', 'Database Design', 'System Design']
-    },
-    {
-      degree: 'Bachelor of Engineering in Electrical/Electronics',
-      school: 'University of Benin',
-      location: 'Benin City, Nigeria',
-      period: '2015 - 2021',
-      gpa: '3.5/4.0',
-      relevant: ['Mathematics', 'Programming Fundamentals', 'Digital Systems', 'Project Management']
-    }
-  ];
+  {
+    degree: 'MSc, Financial Engineering',
+    school: 'WorldQuant University',
+    location: 'Washington, USA',
+    period: '2025 – Present',
+    gpa: 'In Progress',
+    relevant: ['Stochastic Calculus', 'Financial Modeling', 'Risk Management']
+  },
+  {
+    degree: 'Higher Diploma, Computer Science',
+    school: 'Kibo School of Technology',
+    location: 'New York, USA',
+    period: '2022 – 2024',
+    gpa: 'Completed',
+    relevant: ['Algorithms', 'Distributed Systems', 'Database Systems']
+  },
+  {
+    degree: 'Bachelor of Science, Mathematics',
+    school: 'University of Benin',
+    location: 'Benin, Nigeria',
+    period: '2015 – 2019',
+    gpa: 'Completed',
+    relevant: ['Linear Algebra', 'Probability Theory', 'Numerical Methods']
+  }
+];
 
   return (
     <section id="experience" className="py-20 bg-gray-900">
