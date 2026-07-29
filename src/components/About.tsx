@@ -1,4 +1,3 @@
-import React from 'react';
 import { Code, Database, Server, Coffee } from 'lucide-react';
 
 const About = () => {
@@ -17,25 +16,25 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-gray-300 leading-relaxed">
-              I'm a dedicated Backend Engineer with extensive experience in Java development, specializing in 
-              Spring Boot, microservices architecture, and cloud technologies. Currently pursuing a Master's in 
-              Financial Engineering at World Quant University while working as a Software Engineer.
+              I'm a Backend Engineer with five years building production systems in Java and Spring Boot —
+              payment infrastructure, KYC and regulatory compliance workflows, and event-driven microservices.
+              I currently lead backend engineering at Trybe Mobile.
             </p>
-            
+
             <p className="text-lg text-gray-300 leading-relaxed">
-              My expertise spans from building robust RESTful APIs to implementing complex distributed systems. 
-              I'm passionate about clean code, performance optimization, and staying current with the latest 
-              developments in the Java ecosystem and cloud computing.
+              My work spans RESTful API design, distributed systems, and the operational side of keeping them
+              running — reconciliation, autoscaling, and secure authentication in regulated fintech environments.
+              I care about clean code, measurable performance, and systems that fail gracefully.
             </p>
 
             <div className="grid grid-cols-2 gap-6 pt-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">15+</div>
-                <div className="text-gray-400">Projects Completed</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">5+</div>
+                <div className="text-gray-400">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">3+</div>
-                <div className="text-gray-400">Years Experience</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">200+</div>
+                <div className="text-gray-400">Engineers Mentored</div>
               </div>
             </div>
           </div>

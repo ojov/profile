@@ -1,4 +1,3 @@
-import React from 'react';
 import { Calendar, MapPin, Briefcase } from 'lucide-react';
 
 const Experience = () => {
@@ -13,18 +12,18 @@ const Experience = () => {
     achievements: [
       'Implemented OAuth2 authentication and integrated Google and Apple sign-in to reduce onboarding friction and secure revenue-driving user interactions.',
       'Integrated Cloudinary for dynamic media storage, efficiently managing thousands of images and videos to optimize content delivery and customer experience.',
-      'Leveraged OpenAI Embeddings to integrate semantic search, improving content relevance and supporting scalable system enhancements.',
+      'Implemented semantic search using OpenAI embeddings stored in pgvector, chosen over Elasticsearch as the better fit for the data model and query patterns.',
       'Automated CI/CD pipelines to optimize deployment processes, reducing release time by 10% and boosting system reliability in a cloud-native environment.'
     ],
     technologies: [
-      'AWS', 'OAuth2', 'Google Sign-In', 'Apple Sign-In', 'Cloudinary', 'OpenAI', 'CI/CD', 'Node.js', 'TypeScript'
+      'Java', 'Spring Boot', 'PostgreSQL', 'pgvector', 'AWS', 'OAuth2', 'Google Sign-In', 'Apple Sign-In', 'Cloudinary', 'CI/CD'
     ]
   },
   {
     title: 'Backend Developer',
     company: 'Simplify Synergy',
     location: 'Abuja, Nigeria',
-    period: 'Jul 2024 - Jun 2025',
+    period: 'Jul 2024 - May 2026',
     description:
       'Developed robust KYC API and secure onboarding workflows to facilitate dynamic regulatory compliance and enhance customer experience, aligning with scalable system requirements.',
     achievements: [
@@ -52,18 +51,25 @@ const Experience = () => {
     technologies: [
       'Java', 'Spring Boot', 'Docker', 'JPA', 'Agile', 'Mentorship'
     ]
+  },
+  {
+    title: 'Technical Trainer & Data Analyst',
+    company: 'Kebbi Tech Hub',
+    location: 'Birnin Kebbi, Nigeria',
+    period: 'Jun 2021 - Aug 2022',
+    description:
+      'Delivered technical training in data analysis, cloud fundamentals, and programming to professional learners across structured cohort programmes.',
+    achievements: [
+      'Designed and taught cohort curricula covering data analysis, programming fundamentals, and cloud concepts.',
+      'Earned AWS certification during this period, building foundational knowledge in cloud architecture, storage, and compute.'
+    ],
+    technologies: [
+      'Python', 'SQL', 'Data Analysis', 'AWS', 'Technical Training'
+    ]
   }
 ];
 
   const education = [
-  {
-    degree: 'MSc, Financial Engineering',
-    school: 'WorldQuant University',
-    location: 'Washington, USA',
-    period: '2025 – Present',
-    gpa: 'In Progress',
-    relevant: ['Stochastic Calculus', 'Financial Modeling', 'Risk Management']
-  },
   {
     degree: 'Higher Diploma, Computer Science',
     school: 'Kibo School of Technology',

@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Loader2 } from 'lucide-react';
+
+const MAIL_ENDPOINT = 'https://mailservice-ojov340-wmq2zj06.leapcell.dev/send-email';
+const FALLBACK_EMAIL = 'victorojo007@gmail.com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +13,7 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -19,13 +23,15 @@ const Contact = () => {
   };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (isSubmitting) return;
+    setIsSubmitting(true);
 
     try {
-      const res = await fetch('https://mailservice-ojov340-wmq2zj06.leapcell.dev/send-email', {
+      const res = await fetch(MAIL_ENDPOINT, {
         method: 'POST',
-        headers: { 
+        headers: {
           'accept': 'application/json',
-          'Content-Type': 'application/json' 
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           sender_name: formData.name,
@@ -36,19 +42,21 @@ const Contact = () => {
         }),
       });
 
-     if (res.ok) {
-     toast.success('Message sent successfully!');
-     console.log('Message sent successfully!');
-     // Reset form fields
-     setFormData({ name: '', email: '', subject: '', message: '' });
-   } else {
-    console.error('Failed to send message:', res.statusText);
-     toast.error('Failed to send message.');
-   }
- } catch (error) {
-   toast.error('An error occurred. Please try again.');
- }
+      if (res.ok) {
+        toast.success("Message sent — I'll get back to you shortly.");
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        console.error('Mail service rejected the request:', res.status, res.statusText);
+        toast.error(`Couldn't send that (error ${res.status}). Please email me directly at ${FALLBACK_EMAIL}.`);
+      }
+    } catch (error) {
+      console.error('Could not reach the mail service:', error);
+      toast.error(`Couldn't reach the mail service. Please email me directly at ${FALLBACK_EMAIL}.`);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
   return (
     <section id="contact" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -99,7 +107,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-400">Location</p>
-                  <p className="text-white font-medium">Benin, Nigeria</p>
+                  <p className="text-white font-medium">Benin City, Nigeria</p>
+                  <p className="text-gray-400 text-sm">Open to Lagos relocation &amp; remote</p>
                 </div>
               </div>
             </div>
@@ -204,15 +213,33 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center space-x-2"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center space-x-2 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
-                <Send className="h-5 w-5" />
-                <span>Send Message</span>
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" />
+                    <span>Sending…</span>
+                  </>
+                ) : (
+                  <>
+                    <Send className="h-5 w-5" aria-hidden="true" />
+                    <span>Send Message</span>
+                  </>
+                )}
               </button>
             </form>
           </div>
         </div>
       </div>
+
+      <ToastContainer
+        position="bottom-right"
+        theme="dark"
+        autoClose={6000}
+        newestOnTop
+        closeOnClick
+      />
     </section>
   );
 };

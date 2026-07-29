@@ -1,4 +1,3 @@
-import React from 'react';
 import { Code2, Heart, Coffee } from 'lucide-react';
 
 const Footer = () => {
