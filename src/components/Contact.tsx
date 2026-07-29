@@ -65,7 +65,7 @@ const Contact = () => {
             Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">Touch</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Let's discuss how we can work together to bring your next Java project to life
+            Let's discuss how we can work together to bring your next backend or platform project to life
           </p>
         </div>
 

@@ -3,50 +3,50 @@ import { Calendar, MapPin, Briefcase } from 'lucide-react';
 const Experience = () => {
   const experiences = [
   {
-    title: 'Lead Backend Engineer',
+    title: 'Senior Backend Engineer',
     company: 'Trybe Mobile',
     location: 'Austin, Texas, USA',
     period: 'Jul 2024 - Present',
     description:
-      'Designed and engineered a scalable AWS backend architecture to support mission-critical customer acquisition and revenue operations, achieving 99.9% uptime and enhancing data integrity through robust multi-layer authentication.',
+      'Leading backend architecture and platform initiatives for mission-critical customer acquisition and revenue systems, achieving 99.9% uptime and strengthening data integrity through multi-layer authentication.',
     achievements: [
-      'Implemented OAuth2 authentication and integrated Google and Apple sign-in to reduce onboarding friction and secure revenue-driving user interactions.',
-      'Integrated Cloudinary for dynamic media storage, efficiently managing thousands of images and videos to optimize content delivery and customer experience.',
-      'Implemented semantic search using OpenAI embeddings stored in pgvector, chosen over Elasticsearch as the better fit for the data model and query patterns.',
-      'Automated CI/CD pipelines to optimize deployment processes, reducing release time by 10% and boosting system reliability in a cloud-native environment.'
+      'Architected and evolved a resilient AWS-based backend platform to support high-volume customer acquisition and revenue workflows at scale.',
+      'Implemented OAuth2 and SSO integrations with Google and Apple sign-in, reducing onboarding friction while strengthening authentication for revenue-driving user interactions.',
+      'Introduced semantic search using OpenAI embeddings in pgvector — chosen over Elasticsearch as the better fit for the data model — and integrated Cloudinary to efficiently manage thousands of images and videos for content delivery.',
+      'Established CI/CD automation and deployment standards, cutting release time by 10% and improving reliability across cloud-native services.'
     ],
     technologies: [
       'Java', 'Spring Boot', 'PostgreSQL', 'pgvector', 'AWS', 'OAuth2', 'Google Sign-In', 'Apple Sign-In', 'Cloudinary', 'CI/CD'
     ]
   },
   {
-    title: 'Backend Developer',
+    title: 'Senior Backend Engineer',
     company: 'Simplify Synergy',
     location: 'Abuja, Nigeria',
     period: 'Jul 2024 - May 2026',
     description:
-      'Developed robust KYC API and secure onboarding workflows to facilitate dynamic regulatory compliance and enhance customer experience, aligning with scalable system requirements.',
+      'Built and modernized backend capabilities for compliance-driven fintech workflows, focusing on scalability, security, and dependable service delivery.',
     achievements: [
-      'Executed data migration from a relational database to NoSQL, improving transaction speeds by 30%, while ensuring data integrity crucial for distributed systems.',
-      'Implemented a microservices architecture using Spring Boot and reactive programming to reduce load times by 30%, ensuring system scalability and high reliability.',
-      'Engineered a secure authentication and authorization system with OAuth2 and Keycloak for over 1,000 users, reinforcing data security in critical operations.',
-      'Utilized Kafka for event-driven processing, ensuring high throughput and fault tolerance, key aspects in maintaining robust revenue and customer acquisition systems.'
+      'Led data migration from a relational database to NoSQL, improving transaction speeds by 30% while preserving data integrity for high-volume distributed processing.',
+      'Designed event-driven microservices with Spring Boot, reactive programming, and Kafka — cutting load times by 30% while ensuring high-throughput, fault-tolerant processing.',
+      'Implemented OAuth2 and Keycloak-based authentication and authorization for 1,000+ users, reinforcing security for critical operations.',
+      'Collaborated with product and compliance stakeholders to deliver performant KYC and onboarding APIs that supported business growth.'
     ],
     technologies: [
       'Spring Boot', 'Reactive Programming', 'OAuth2', 'Keycloak', 'Kafka', 'NoSQL', 'KYC', 'Microservices'
     ]
   },
   {
-    title: 'Associate Software Engineer',
+    title: 'Software Engineer',
     company: 'Decagon',
     location: 'Benin, Nigeria',
     period: 'Sep 2022 - Jul 2024',
     description:
-      'Worked with cross-functional teams to design and develop web applications using Agile methodologies, resulting in a 20% reduction in project delivery times.',
+      'Contributed to cross-functional product delivery using Agile practices, building reliable backend services that helped reduce project delivery times by 20%.',
     achievements: [
-      'Designed and implemented Docker-based containerization for web and mobile APIs, improving deployment speed by 30%.',
-      'Designed and implemented JPA-based data access layers, optimizing database interactions and improving query efficiency by 40%.',
-      'Mentored over 200 aspiring software engineers in backend development using Java and Spring Boot.'
+      'Implemented Docker-based containerization for web and mobile APIs, improving deployment speed by 30% and consistency across environments.',
+      'Designed JPA-based data access layers, improving query efficiency by 40% and reducing bottlenecks in application workflows.',
+      'Mentored over 200 aspiring engineers in backend development using Java and Spring Boot, strengthening team capability and delivery quality.'
     ],
     technologies: [
       'Java', 'Spring Boot', 'Docker', 'JPA', 'Agile', 'Mentorship'
@@ -61,7 +61,18 @@ const Experience = () => {
       'Delivered technical training in data analysis, cloud fundamentals, and programming to professional learners across structured cohort programmes.',
     achievements: [
       'Designed and taught cohort curricula covering data analysis, programming fundamentals, and cloud concepts.',
-      'Earned AWS certification during this period, building foundational knowledge in cloud architecture, storage, and compute.'
+      <>
+        Earned{' '}
+        <a
+          href="https://aws.amazon.com/certification/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-400 underline decoration-blue-500/50 hover:text-teal-400"
+        >
+          AWS Certified Cloud Practitioner
+        </a>{' '}
+        during this period, building foundational knowledge in cloud architecture, storage, and compute.
+      </>
     ],
     technologies: [
       'Python', 'SQL', 'Data Analysis', 'AWS', 'Technical Training'
@@ -96,7 +107,7 @@ const Experience = () => {
             Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">Journey</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            My career progression as a Backend Engineer, building expertise in Java and cloud technologies
+            My career progression as a senior engineer building scalable platforms, leading delivery, and driving technical excellence
           </p>
         </div>
 

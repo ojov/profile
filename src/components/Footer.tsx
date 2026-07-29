@@ -13,7 +13,7 @@ const Footer = () => {
           </div>
           
           <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-            Passionate Backend Engineer creating robust Java solutions that power modern applications. 
+            Senior Software Engineer building scalable, secure backend systems and platforms.
             Always learning, always coding, always growing.
           </p>
 

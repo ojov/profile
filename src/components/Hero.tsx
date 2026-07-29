@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, Download, ChevronDown } from 'lucide-react';
 const Hero = () => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const titles = ['Backend Engineer', 'Java Developer', 'Spring Boot Expert', 'Cloud Architect'];
+  const titles = ['Senior Software Engineer', 'Backend Architect', 'Java Platform Engineer', 'Cloud-Native Engineer'];
 
   useEffect(() => {
     const currentTitle = titles[currentIndex];
@@ -64,8 +64,8 @@ const Hero = () => {
           </div>
           
           <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Experienced Backend Engineer specializing in Java, Spring Boot, and cloud technologies. 
-            I build scalable, high-performance applications that power modern digital experiences.
+            Senior Software Engineer specializing in backend architecture, distributed systems, and cloud-native platforms.
+            I design resilient services, lead technical delivery, and build products that scale with confidence.
           </p>
         </div>
 
