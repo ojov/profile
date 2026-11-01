@@ -3,12 +3,26 @@ import { Calendar, MapPin, Briefcase } from 'lucide-react';
 const Experience = () => {
   const experiences = [
   {
+    title: 'Software Engineer',
+    company: 'Dot',
+    location: 'Nigeria (Remote)',
+    period: 'Oct 2026 - Present',
+    description:
+      'Joined Dot as a Software Engineer in October 2026, starting with local development setup across existing repositories.',
+    achievements: [
+      'Updated existing repositories to run locally and added local setup documentation for them.'
+    ],
+    technologies: [
+      'Local Development Setup', 'Technical Documentation'
+    ]
+  },
+  {
     title: 'Senior Backend Engineer',
     company: 'Trybe Mobile',
     location: 'Austin, Texas, USA',
-    period: 'Jul 2024 - Present',
+    period: 'Jul 2024 - Oct 2026',
     description:
-      'Leading backend architecture and platform initiatives for mission-critical customer acquisition and revenue systems, achieving 99.9% uptime and strengthening data integrity through multi-layer authentication.',
+      'Led backend architecture and platform initiatives for mission-critical customer acquisition and revenue systems, achieving 99.9% uptime and strengthening data integrity through multi-layer authentication.',
     achievements: [
       'Architected and evolved a resilient AWS-based backend platform to support high-volume customer acquisition and revenue workflows at scale.',
       'Implemented OAuth2 and SSO integrations with Google and Apple sign-in, reducing onboarding friction while strengthening authentication for revenue-driving user interactions.',
